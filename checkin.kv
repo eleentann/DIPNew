@@ -1,0 +1,25 @@
+MDScreen:
+    name: "checkinscreen"
+
+    MDLabel:
+        text: 'Check In'
+        halign: 'center'
+        pos_hint: {'center_y':0.8}
+
+    MDRectangleFlatButton:
+        text: 'Check In With Camera'
+        pos_hint: {'center_x':0.5,'center_y':0.6}
+
+    MDRectangleFlatButton:
+        text: 'Check In Manually'
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "manualcheckin"
+
+    MDRectangleFlatButton:
+        text: 'Back'
+        pos_hint: {'center_x':0.5,'center_y':0.1}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "menuscreen"

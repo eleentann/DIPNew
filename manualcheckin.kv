@@ -1,0 +1,56 @@
+MDScreen:
+    name: "manualcheckin"
+
+    MDLabel:
+        text: "Check In Items"
+        halign: 'center'
+        pos_hint: {'center_y': 0.8}
+
+    MDTextField
+        id: name_item
+        hint_text: "Enter Name of Item"
+        icon_right: "android"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        size_hint_x: 0.8
+
+
+    MDRaisedButton:
+        id:date_picker
+        text: 'Key In Expiration Date'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+        on_release: app.show_date_picker()
+
+    MDLabel:
+        id:expiration_date
+        text: ''
+        halign: 'center'
+        pos_hint: {'center_y': 0.5}
+
+    MDRectangleFlatButton:
+        id: saveButton
+        text: 'Save'
+        halign: 'center'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        on_release:
+            app.show_text()
+        on_press: app.clearInput()
+
+
+    #MDRectangleFlatButton:
+        #text: 'Trigger Notification'
+        #halign: 'center'
+        #pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        #on_release: app.show_notification()
+
+    MDRectangleFlatButton:
+        id: camera
+        text: 'Check In With Camera'
+        halign: 'center'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+    MDRectangleFlatButton:
+        text: 'Go Back'
+        pos_hint: {'center_x':0.2,'center_y':0.1}
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "menuscreen"

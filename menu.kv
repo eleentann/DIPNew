@@ -1,0 +1,22 @@
+MDScreen:
+    name: "menuscreen"
+
+    MDLabel:
+        id: username_info
+        text: 'Hello Main'
+        halign: 'center'
+        pos_hint: {'center_y':0.90}
+
+    MDRectangleFlatButton:
+        text: 'Check In'
+        pos_hint: {'center_x':0.5,'center_y':0.6}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "manualcheckin"
+
+    MDRectangleFlatButton:
+        text: 'Check out'
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "checkoutscreen"
