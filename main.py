@@ -17,7 +17,7 @@ from kivymd.uix.picker import MDDatePicker
 from kivymd.uix.button import MDRectangleFlatButton
 
 
-Window.size = (310,500)
+#Window.size = (310,500)
 
 
 class Slope(MDApp):
